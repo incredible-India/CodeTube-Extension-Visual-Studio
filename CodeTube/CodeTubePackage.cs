@@ -9,15 +9,16 @@ namespace CodeTube
 {
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [InstalledProductRegistration(Vsix.Name, Vsix.Description, Vsix.Version)]
+    [ProvideToolWindow(typeof(MyToolWindow.Pane), Style = VsDockStyle.Tabbed, Window = WindowGuids.SolutionExplorer)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
     [Guid(PackageGuids.CodeTubeString)]
-    [ProvideToolWindow(typeof(CodeTubeWindow))]
     public sealed class CodeTubePackage : ToolkitPackage
     {
         protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
         {
             await this.RegisterCommandsAsync();
-            await CodeTubeWindowCommand.InitializeAsync(this);
+
+            this.RegisterToolWindows();
         }
     }
 }

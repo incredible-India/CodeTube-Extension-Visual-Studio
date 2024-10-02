@@ -7,7 +7,7 @@ namespace CodeTube
 {
     internal sealed partial class Vsix
     {
-        public const string Id = "CodeTube.cf725c47-fda3-4af1-a816-3ee96f51225d";
+        public const string Id = "CodeTube.f305613a-4b47-4255-9eef-9087c2ab280e";
         public const string Name = "CodeTube";
         public const string Description = @"Empty VSIX Project.";
         public const string Language = "en-US";
