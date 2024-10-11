@@ -11,7 +11,7 @@ namespace CodeTube
         public const string Name = "CodeTube";
         public const string Description = @"A visual studio extension for youtube player.";
         public const string Language = "en-US";
-        public const string Version = "1.0";
+        public const string Version = "1.1";
         public const string Author = "Himanshu kumar Sharma HKS";
         public const string Tags = "";
     }
